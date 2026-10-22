@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kali_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/kali_surface"
+        app:navigationIcon="@drawable/ic_back"
+        app:subtitleTextColor="@color/kali_muted"
+        app:title="@string/no_file"
+        app:titleTextColor="@color/kali_text" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tabStrip"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/kali_surface"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/kali_surface_2"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="7dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/searchInput"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:hint="@string/find_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/kali_text"
+                android:textColorHint="@color/kali_dim"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/searchPrev"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="↑"
+                android:textColor="@color/kali_muted"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/searchNext"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="↓"
+                android:textColor="@color/kali_muted"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/searchClose"
+                android:layout_width="38dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="×"
+                android:textColor="@color/kali_muted"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/replaceInput"
+                android:layout_width="0dp"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:hint="@string/replace_hint"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/kali_text"
+                android:textColorHint="@color/kali_dim"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/replaceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/replace"
+                android:textColor="@color/kali_accent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/replaceAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:gravity="center"
+                android:paddingStart="6dp"
+                android:paddingEnd="10dp"
+                android:text="@string/replace_all"
+                android:textColor="@color/kali_accent"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/caseToggle"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="@string/match_case"
+                android:textColor="@color/kali_muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/wordToggle"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="@string/whole_word"
+                android:textColor="@color/kali_muted"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/regexToggle"
+                android:layout_width="32dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_chip"
+                android:gravity="center"
+                android:text="@string/regex"
+                android:textColor="@color/kali_muted"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <io.github.rosemoe.sora.widget.CodeEditor
+        android:id="@+id/editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@color/kali_surface"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/symbolRow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="@color/kali_surface_2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:id="@+id/positionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Ln 1, Col 1"
+            android:textColor="@color/kali_muted"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/matchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:fontFamily="monospace"
+            android:textColor="@color/kali_accent"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/languageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Plain text"
+            android:textColor="@color/kali_muted"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/modifiedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="monospace"
+            android:text=""
+            android:textColor="@color/kali_accent"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

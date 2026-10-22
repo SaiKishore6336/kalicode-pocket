@@ -1,0 +1,65 @@
+package com.saikishore.kalicodepocket.data
+
+object MimeTypes {
+    private val map = mapOf(
+        "py" to "text/x-python",
+        "js" to "application/javascript",
+        "mjs" to "application/javascript",
+        "cjs" to "application/javascript",
+        "ts" to "application/typescript",
+        "jsx" to "text/jsx",
+        "tsx" to "text/tsx",
+        "html" to "text/html",
+        "htm" to "text/html",
+        "css" to "text/css",
+        "scss" to "text/x-scss",
+        "json" to "application/json",
+        "md" to "text/markdown",
+        "markdown" to "text/markdown",
+        "java" to "text/x-java",
+        "kt" to "text/x-kotlin",
+        "kts" to "text/x-kotlin",
+        "xml" to "text/xml",
+        "yaml" to "text/yaml",
+        "yml" to "text/yaml",
+        "sh" to "text/x-shellscript",
+        "bash" to "text/x-shellscript",
+        "zsh" to "text/x-shellscript",
+        "sql" to "application/sql",
+        "c" to "text/x-c",
+        "h" to "text/x-c",
+        "cpp" to "text/x-c++",
+        "cc" to "text/x-c++",
+        "hpp" to "text/x-c++",
+        "rs" to "text/x-rust",
+        "go" to "text/x-go",
+        "php" to "application/x-httpd-php",
+        "rb" to "text/x-ruby",
+        "lua" to "text/x-lua",
+        "txt" to "text/plain",
+        "log" to "text/plain",
+        "env" to "text/plain",
+        "png" to "image/png",
+        "jpg" to "image/jpeg",
+        "jpeg" to "image/jpeg",
+        "gif" to "image/gif",
+        "webp" to "image/webp",
+        "svg" to "image/svg+xml",
+        "ico" to "image/x-icon",
+        "woff" to "font/woff",
+        "woff2" to "font/woff2",
+        "ttf" to "font/ttf",
+        "otf" to "font/otf",
+        "mp3" to "audio/mpeg",
+        "wav" to "audio/wav",
+        "mp4" to "video/mp4",
+        "webm" to "video/webm",
+        "pdf" to "application/pdf",
+    )
+
+    fun forName(name: String): String =
+        map[WorkspacePaths.extensionOf(name)] ?: "application/octet-stream"
+
+    fun isTextExtension(extension: String): Boolean =
+        extension in map.keys || extension.isEmpty()
+}

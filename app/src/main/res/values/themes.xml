@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KaliCodePocket" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/kali_accent</item>
+        <item name="colorOnPrimary">@color/kali_on_accent</item>
+        <item name="colorPrimaryContainer">@color/kali_selected</item>
+        <item name="colorOnPrimaryContainer">@color/kali_text</item>
+        <item name="colorSecondary">@color/kali_accent</item>
+        <item name="colorOnSecondary">@color/kali_on_accent</item>
+        <item name="colorSecondaryContainer">@color/kali_selected</item>
+        <item name="colorOnSecondaryContainer">@color/kali_accent</item>
+        <item name="colorSurface">@color/kali_surface</item>
+        <item name="colorOnSurface">@color/kali_text</item>
+        <item name="colorSurfaceVariant">@color/kali_surface_2</item>
+        <item name="colorOnSurfaceVariant">@color/kali_muted</item>
+        <item name="colorOutline">@color/kali_border</item>
+        <item name="colorError">@color/kali_error</item>
+        <item name="android:colorBackground">@color/kali_bg</item>
+        <item name="android:windowBackground">@color/kali_bg</item>
+        <item name="android:statusBarColor">@color/kali_bg</item>
+        <item name="android:navigationBarColor">@color/kali_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:textColorPrimary">@color/kali_text</item>
+        <item name="android:textColorSecondary">@color/kali_muted</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="materialButtonStyle">@style/Widget.KaliCodePocket.Button</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.KaliCodePocket.Dialog</item>
+    </style>
+
+    <style name="Widget.KaliCodePocket.Button" parent="Widget.Material3.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="backgroundTint">@color/kali_accent</item>
+        <item name="android:textColor">@color/kali_on_accent</item>
+        <item name="iconTint">@color/kali_on_accent</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+    <style name="Widget.KaliCodePocket.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="strokeColor">@color/kali_border</item>
+        <item name="android:textColor">@color/kali_text</item>
+        <item name="iconTint">@color/kali_text</item>
+    </style>
+
+    <style name="TextAppearance.KaliCodePocket.Kicker" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/kali_accent</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:letterSpacing">0.16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.KaliCodePocket.Title" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/kali_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.04</item>
+        <item name="android:lineSpacingMultiplier">0.95</item>
+    </style>
+
+    <style name="ThemeOverlay.KaliCodePocket.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorSurface">@color/kali_surface</item>
+        <item name="colorOnSurface">@color/kali_text</item>
+        <item name="colorSurfaceContainerHigh">@color/kali_surface</item>
+        <item name="android:textColorSecondary">@color/kali_muted</item>
+    </style>
+</resources>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/kali_bg"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/kali_surface"
+        app:navigationIcon="@drawable/ic_back"
+        app:subtitle="local preview"
+        app:subtitleTextColor="@color/kali_muted"
+        app:title="@string/preview"
+        app:titleTextColor="@color/kali_text" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/kali_bg" />
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/kali_accent" />
+
+        <TextView
+            android:id="@+id/previewError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="28dp"
+            android:text="@string/preview_error"
+            android:textColor="@color/kali_muted"
+            android:textSize="14sp"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/consolePanel"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/kali_surface"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/console"
+                android:textColor="@color/kali_accent"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/clearConsole"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="10dp"
+                android:paddingEnd="4dp"
+                android:text="@string/clear_console"
+                android:textColor="@color/kali_muted"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/consoleScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/kali_bg"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/consoleText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/kali_text"
+                android:textIsSelectable="true"
+                android:textSize="11sp" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

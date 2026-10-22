@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/kali_surface"
+    android:orientation="vertical"
+    android:paddingTop="8dp">
+
+    <View
+        android:layout_width="38dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_input" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/fileSheetUp"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/back"
+            android:padding="8dp"
+            android:src="@drawable/ic_arrow_up"
+            app:tint="@color/kali_muted" />
+
+        <TextView
+            android:id="@+id/fileSheetPath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="start"
+            android:fontFamily="monospace"
+            android:maxLines="1"
+            android:paddingStart="4dp"
+            android:paddingEnd="10dp"
+            android:text="/"
+            android:textColor="@color/kali_text"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fileSheetNewFile"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="+ file"
+            android:textColor="@color/kali_accent"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fileSheetNewFolder"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingStart="6dp"
+            android:paddingEnd="10dp"
+            android:text="+ folder"
+            android:textColor="@color/kali_accent"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fileList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:clipToPadding="false"
+        android:minHeight="220dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical" />
+</LinearLayout>

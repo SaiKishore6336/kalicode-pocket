@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_save"
+        android:title="@string/save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/find"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_run"
+        android:icon="@drawable/ic_play"
+        android:title="@string/run"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_files"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/files"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more"
+        app:showAsAction="always" />
+</menu>

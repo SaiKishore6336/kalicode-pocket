@@ -1,0 +1,103 @@
+KaliCode Pocket
+Copyright (c) 2026 Sai Kishore
+
+KaliCode Pocket app code and UI are licensed under the MIT License.
+See LICENSE.
+
+This application includes or depends on the following third-party software.
+The notices below are provided for attribution and license compliance.
+
+-------------------------------------------------------------------------------
+Sora Editor
+https://github.com/Rosemoe/sora-editor
+License: GNU Lesser General Public License, version 2.1 or later
+(LGPL-2.1-or-later)
+
+Sora Editor is used as the native code editor component. The full LGPL 2.1
+text is included in licenses/LGPL-2.1.txt. The corresponding source code for
+this application, including its build files and modifications, is available
+in this repository. If you distribute a binary APK, keep this source available
+so recipients can exercise their LGPL relinking rights.
+
+-------------------------------------------------------------------------------
+Monarch language pack / monarch-kt
+https://github.com/dingyi222666/monarch-kt
+License: Apache License 2.0
+
+The Monarch language pack provides the language grammars used for syntax
+highlighting. The full Apache 2.0 text is included in
+licenses/Apache-2.0.txt.
+
+-------------------------------------------------------------------------------
+Chaquopy
+https://github.com/chaquo/chaquopy
+License: MIT
+
+Chaquopy provides the embedded CPython runtime and the Java/Python bridge used
+to run Python files on the device. The full MIT text is included in
+licenses/Chaquopy-MIT.txt.
+
+-------------------------------------------------------------------------------
+Python
+https://www.python.org
+License: Python Software Foundation License
+
+The embedded CPython 3.12 runtime and its standard library are distributed
+under the Python Software Foundation License. The full license text is
+included in licenses/Python-3.12.txt.
+
+-------------------------------------------------------------------------------
+Monaco Editor language definitions
+https://github.com/microsoft/monaco-editor
+License: MIT
+
+The Monarch grammars are derived from the Monarch language definitions used by
+Microsoft Monaco Editor.
+
+-------------------------------------------------------------------------------
+Oniguruma / Joni
+https://github.com/jruby/joni
+License: BSD 2-Clause
+
+The pure-Java Oniguruma regular-expression engine is used by Monarch grammars.
+Copyright (c) 2002-2008 TK Kuroiwa and contributors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+-------------------------------------------------------------------------------
+AndroidX, Material Components for Android, Kotlin, and Kotlin Coroutines
+https://developer.android.com/jetpack/androidx
+https://github.com/material-components/material-components-android
+https://kotlinlang.org
+License: Apache License 2.0
+
+-------------------------------------------------------------------------------
+Android Open Source Project
+https://source.android.com
+License: Apache License 2.0
+
+-------------------------------------------------------------------------------
+Fonts and icons
+
+KaliCode Pocket uses Android system fonts and vector icons derived from
+Material Symbols / Android platform resources. Android platform resources are
+licensed under Apache 2.0. Material Symbols are licensed under Apache 2.0.
