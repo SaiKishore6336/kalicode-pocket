@@ -44,7 +44,7 @@ Python, JavaScript, TypeScript, HTML, CSS, JSON, Markdown, Java, Kotlin, XML, YA
 
 Download `KaliCodePocket-1.1.1-release.apk` from [Releases](../../releases/latest).
 
-The release APK supports **arm64-v8a** phones and **x86_64** emulators and is about **41 MB**. It is signed with a local test key for sideloading; build and sign with your own private key before distributing through an app store.
+The release APK supports **arm64-v8a** phones and **x86_64** emulators and is about **41 MB**. It is signed with the developer's private release keystore. The keystore stays out of the repository (see [Release signing](#release-signing)).
 
 ### Install over USB
 
@@ -125,9 +125,17 @@ The release build is minified and resource-shrunk. An unsigned release APK is wr
 
 ## Release signing
 
-The APK published on GitHub is signed with the Android debug key **for local testing and sideloading only**. Do not upload it to Google Play or another store.
+The APK published on GitHub and submitted to app stores is signed with a private,
+self-managed RSA 4096 release keystore. The keystore and its passwords are kept
+outside the repository.
 
-Before publishing your own build, generate a private keystore and sign the release APK with it:
+Signing certificate SHA-256:
+
+```text
+CB:8B:54:2C:9A:F6:17:2F:87:0C:62:53:CB:65:C8:98:74:06:A0:76:20:E4:E1:12:F5:FA:D7:7C:7B:6C:EA:68
+```
+
+If you build and distribute your own copy, generate a private keystore and sign the release APK with it:
 
 ```bash
 keytool -genkeypair -v -keystore keystore/kalicodepocket-release.jks \
@@ -143,7 +151,7 @@ keytool -genkeypair -v -keystore keystore/kalicodepocket-release.jks \
   dist/KaliCodePocket-release-aligned.apk
 ```
 
-Keep the keystore and passwords backed up and private. They are required for every future update to the same app package.
+Keep the keystore and passwords backed up and private. They are required for every future update to the same app package — losing them means the APK can no longer be updated in place.
 
 ## Limits and notes
 

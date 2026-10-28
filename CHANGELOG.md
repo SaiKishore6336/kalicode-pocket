@@ -6,6 +6,8 @@
 - Python now starts new lines without synthetic or inherited indentation; use Tab for blocks.
 - Updated the dashboard version label.
 - Added GitHub publishing documentation, screenshots, and release notes.
+- Re-signed the release APK with the developer's private release keystore. If you installed an earlier test-signed build, uninstall it before updating.
+- Added a Softonic submission package under `docs/softonic/` (listing text, store icon, screenshots, checksums).
 
 ## 1.1.0
 

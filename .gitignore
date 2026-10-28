@@ -13,3 +13,4 @@ captures/
 keystore.properties
 app/release/
 dist/
+keystore/
